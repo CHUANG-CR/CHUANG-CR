@@ -1,5 +1,5 @@
 
-# 👨‍💻 About Me:
+# 👦 About Me:
 
 - 🎓 Currently studying at **STUST**.
 - 💼 Currently selling **Cleaning** **Supplies** online.
