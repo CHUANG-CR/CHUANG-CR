@@ -1,22 +1,15 @@
-## Hi there 👋
-> **非淡泊無以名志，非寧靜無以致遠。**
 
-### 👨‍💻 About Me
+# 👨‍💻 About Me:
 
 - 🎓 Currently studying at **STUST**.
-- 💼 Currently selling cleaning supplies online
+- 💼 Currently selling **Cleaning** **Supplies** online.
 - 🌱 Actively learning and sharpening my programming skills in **C++** and **Python**.
 - 🌍 Passionate about **Traveling** and **Photography**, always looking for the next destination to explore and capture through my lens.
 - ⚾ Staying active and energetic by playing **Baseball** and **Table Tennis**.
-
-### 🛠️ Languages & Goals
-
-- **Coding:** C++, Python
-- **Focus:** Bridging the gap between software logic and practical, real-world applications.
-
 ---
-📫 *Feel free to reach out if you want to talk about code, share travel itineraries, or just play a game of table tennis!*<!--
-**CHUANG-CR/CHUANG-CR** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+# 💡 Open to Suggestions & Advice!
+I'm optimizing my online store and would love any feedback or tips on scaling up!
 
-Here are some ideas to get you started:
+- my store:[元和企業行](shopee.tw/a0905104690)
+- How to reach me:[a0905104690@gmail.com](mailto:a0905104690@gmail.com)
 
