@@ -3,7 +3,7 @@
 
 - 🎓 Currently studying at **STUST**.
 - 💼 Currently selling **Cleaning** **Supplies** online.
-- 🌱 Actively learning and sharpening my programming skills in **C++** and **Python**.
+- 🌱  Currently, I'm dedicating my time to learning **web development**, as well as the **C++** and **Python** programming languages.
 - 🌍 Passionate about **Traveling** and **Photography**, always looking for the next destination to explore and capture through my lens.
 - ⚾ Staying active and energetic by playing **Baseball** and **Table Tennis**.
 ---
