@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Self-Introduction | CHUANG CHI JEN</title>
+    <style>
+        /* 全局設定 */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            height: 100%;
+            overflow-x: hidden;
+            background-color: #020617; 
+        }
+
+        /* 簡報容器 */
+        .presentation-container {
+            height: 100vh;
+            width: 100%;
+            overflow-y: scroll;
+            overflow-x: hidden; 
+            scroll-snap-type: y mandatory;
+        }
+
+        /* 投影片外層包裝 */
+        .slide-wrapper {
+            height: 100vh;
+            width: 100%;
+            scroll-snap-align: start;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 4vh 4vw; 
+            box-sizing: border-box;
+        }
+
+        /* 投影片本體 */
+        .slide {
+            width: 100%;
+            max-width: 1280px; 
+            height: 100%;
+            max-height: 720px; 
+            border-radius: 20px; 
+            box-shadow: 0 20px 50px rgba(0,0,0,0.6); 
+            display: flex;
+            position: relative;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        .bg-dark { 
+            background-color: #0f172a; 
+            color: white; 
+            border: 3px solid #3b82f6; 
+        }
+        .bg-light { 
+            background-color: #f8fafc; 
+            color: #1e293b; 
+            border: 3px solid #cbd5e1; 
+        }
+        .text-accent { color: #3b82f6; }
+
+        /* ============== 第 1 頁：封面 ============== */
+        .slide-1 {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .slide-1 img {
+            width: 240px;
+            height: 240px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid #3b82f6;
+            margin-bottom: 24px;
+        }
+        .slide-1 h1 {
+            font-size: 54px;
+            margin: 0 0 16px 0;
+            letter-spacing: 2px;
+        }
+        .slide-1 p {
+            font-size: 24px;
+            color: #94a3b8;
+            margin: 0;
+            font-weight: 300;
+        }
+
+        /* ============== 第 2 頁：經歷背景 ============== */
+        .slide-2 {
+            padding: 0 8%;
+            align-items: center;
+            justify-content: center;
+        }
+        .slide-2-left {
+            flex: 1;
+            padding-right: 5%;
+            border-right: 3px solid #cbd5e1;
+        }
+        .slide-2-left h2 {
+            font-size: 28px;
+            color: #3b82f6;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .slide-2-left h3 {
+            font-size: 42px;
+            line-height: 1.3;
+            margin: 0;
+        }
+        .slide-2-right {
+            flex: 1;
+            padding-left: 8%;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+        .info-block h4 {
+            font-size: 18px;
+            color: #64748b;
+            margin: 0 0 10px 0;
+            text-transform: uppercase;
+        }
+        .info-block p {
+            font-size: 28px;
+            margin: 0;
+            font-weight: 600;
+        }
+
+        /* ============== 第 3 頁：興趣 (滿版照片) ============== */
+        .slide-3 {
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('West-market.jpg') center/cover;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+        .slide-3 h2 {
+            font-size: 48px;
+            margin: 0 0 50px 0;
+            letter-spacing: 2px;
+        }
+        .hobbies-container {
+            display: flex;
+            gap: 60px; /* 稍微縮小間距以適應固定寬度 */
+            align-items: flex-start; /* 確保三個區塊頂部切齊 */
+        }
+        .hobby-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 200px; /* 給予固定寬度，確保文字長度不影響排列 */
+        }
+        .hobby-icon {
+            font-size: 64px;
+            margin-bottom: 20px;
+            height: 80px; /* 核心修正：強制固定高度 */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 1; /* 消除字體預設行高干擾 */
+        }
+        .hobby-item span {
+            font-size: 32px;
+            font-weight: 500;
+        }
+
+        /* ============== 第 4 頁：結尾 ============== */
+        .slide-4 {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .slide-4 h2 {
+            font-size: 54px;
+            margin: 0 0 40px 0;
+        }
+        .contact-box {
+            background: rgba(255,255,255,0.05);
+            padding: 50px 70px;
+            border-radius: 16px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .contact-item {
+            font-size: 28px;
+            margin: 15px 0;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            color: #cbd5e1;
+        }
+        .contact-item span {
+            color: white;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="presentation-container">
+        
+        <!-- 第 1 頁：封面 -->
+        <div class="slide-wrapper">
+            <div class="slide bg-dark slide-1">
+                <img src="Portrait.JPG" alt="CHUANG CHI JEN">
+                <h1>CHUANG CHI JEN</h1>
+                <p>Junior in Computer Science | Online Store Owner</p>
+            </div>
+        </div>
+
+        <!-- 第 2 頁：經歷背景 -->
+        <div class="slide-wrapper">
+            <div class="slide bg-light slide-2">
+                <div class="slide-2-left">
+                    <h2>My Journey So Far</h2>
+                    <h3>"Tech Skills. Business Mindset."</h3>
+                </div>
+                <div class="slide-2-right">
+                    <div class="info-block">
+                        <h4>Education</h4>
+                        <p>Junior, CSIE, STUST</p>
+                    </div>
+                    <div class="info-block">
+                        <h4>Current Role</h4>
+                        <p>Online Store Owner</p>
+                    </div>
+                    <div class="info-block">
+                        <h4>Skills</h4>
+                        <p>Web Development & C++</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 第 3 頁：熱忱與興趣 -->
+        <div class="slide-wrapper">
+            <div class="slide slide-3">
+                <h2>HOBBIES & INTERESTS</h2>
+                <div class="hobbies-container">
+                    <div class="hobby-item">
+                        <div class="hobby-icon">📷</div>
+                        <span>Photography</span>
+                    </div>
+                    <div class="hobby-item">
+                        <div class="hobby-icon">✈️</div>
+                        <span>Traveling</span>
+                    </div>
+                    <div class="hobby-item">
+                        <div class="hobby-icon">⚾</div>
+                        <span>Sports</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 第 4 頁：聯絡資訊 -->
+        <div class="slide-wrapper">
+            <div class="slide bg-dark slide-4">
+                <h2>Let's Connect!</h2>
+                <div class="contact-box">
+                    <div class="contact-item">
+                        📧 <span>a0905104690@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        💻 GitHub: <span>CHUANG-CR</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
